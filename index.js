@@ -16,8 +16,7 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
-
+"Because of closure the nestedFunction is able to take the value of internal that is outside of it's scope. Which is why we can see in the nested function it was able to take the value 'internal' which was set in the outside function."
 
 
 
