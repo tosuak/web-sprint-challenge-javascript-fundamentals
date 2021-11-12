@@ -30,7 +30,7 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
 function summation(number) {
   return number * (number+1)/2;
 }
- console.log('task2', summation(4));
+//  console.log('task2', summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -54,8 +54,10 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(array){
+    const names =[];
+    zooAnimals.forEach(data => names.push(`name: ${data.animal_name}, scientific: ${data.scientific_name}`))
+    return names;
   }
   
 
@@ -65,8 +67,8 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(array){
+    return zooAnimals.map(data => data.animal_name.toLowerCase());
   }
   
   
@@ -75,8 +77,9 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(array){
+    const smallPop = [];
+    return zooAnimals.filter(data => smallPop.push(data.population < 5));
   }
   
 
@@ -86,8 +89,8 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(array){
+     return zooAnimals.reduce((data, item) => data + item.population, 0);
   }
   
   
